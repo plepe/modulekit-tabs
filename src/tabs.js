@@ -1,15 +1,17 @@
 require('./tabs.css')
 
 /**
+ * @param {DOMNode} dom - Parent dom node where the tab environment will be added
  * @param {Object} options
  * @property {DOMNode} node the DOMNode which can be added to a parent
  * @property {Tab|null} selected The selected tab
  * @property {Tab[]} list List of available tabs
  */
-function Tabs (options) {
+function Tabs (dom, options) {
   this.options = options || {}
   this.node = document.createElement('div')
   this.node.className = 'tabs'
+  dom.appendChild(this.node)
 
   this.headers = document.createElement('ul')
   this.headers.className = 'tabs-list'
