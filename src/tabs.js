@@ -1,3 +1,5 @@
+require('./tabs.css')
+
 /**
  * @param {Object} options
  * @property {DOMNode} node the DOMNode which can be added to a parent

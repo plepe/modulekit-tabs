@@ -5,5 +5,8 @@
   "main": "src/tabs.js",
   "repository": "https://github.com/plepe/modulekit-tabs",
   "author": "Stephan Bösch-Plepelits <skunk@xover.mud.at>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "browserify-css": "^0.14.0"
+  }
 }
