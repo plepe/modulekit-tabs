@@ -1,3 +1,5 @@
+var ee = require('event-emitter')
+
 /**
  * add a new tab pane to the tabs
  * @param {Object} options
@@ -18,6 +20,7 @@ function Tab (options) {
   this.content = document.createElement('div')
   this.content.className = 'tabs-section'
 }
+ee(Tab.prototype)
 
 /**
  * select this tab
@@ -40,6 +43,7 @@ Tab.prototype.toggle = function () {
 Tab.prototype._select = function () {
   this.header.classList.add('selected')
   this.content.classList.add('selected')
+  this.emit('select', this)
 }
 
 /**
@@ -52,6 +56,7 @@ Tab.prototype.unselect = function () {
 }
 
 Tab.prototype._unselect = function () {
+  this.emit('unselect', this)
   this.header.classList.remove('selected')
   this.content.classList.remove('selected')
 }

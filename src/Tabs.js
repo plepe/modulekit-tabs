@@ -1,3 +1,5 @@
+var ee = require('event-emitter')
+
 /**
  * @param {DOMNode} dom - Parent dom node where the tab environment will be added
  * @param {Object} options
@@ -18,6 +20,7 @@ function Tabs (dom, options) {
   this.selected = null
   this.list = []
 }
+ee(Tabs.prototype)
 
 /**
  * add a tab
