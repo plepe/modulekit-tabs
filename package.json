@@ -1,6 +1,6 @@
 {
   "name": "modulekit-tabs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple tabs for web applications (JS only and PHP+JS)",
   "main": "src/main.js",
   "repository": "https://github.com/plepe/modulekit-tabs",
