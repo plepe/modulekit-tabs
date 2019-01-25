@@ -27,6 +27,7 @@ ee(Tabs.prototype)
  * @param {Tab} tab
  */
 Tabs.prototype.add = function (tab) {
+  this.list.push(tab)
   this.headers.appendChild(tab.header)
   this.node.appendChild(tab.content)
   tab.master = this
