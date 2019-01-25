@@ -31,6 +31,17 @@ Tabs.prototype.add = function (tab) {
   this.headers.appendChild(tab.header)
   this.node.appendChild(tab.content)
   tab.master = this
+  this.reorder()
+}
+
+/**
+ * reorder tabs (by weight)
+ */
+Tabs.prototype.reorder = function () {
+  this.list.sort((a, b) => {
+    return (a.options.weight || 0) - (b.options.weight || 0)
+  })
+  this.list.forEach(tab => this.headers.appendChild(tab.header))
 }
 
 /**

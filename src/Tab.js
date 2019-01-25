@@ -4,6 +4,7 @@ var ee = require('event-emitter')
  * add a new tab pane to the tabs
  * @param {Object} options
  * @param {String} options.id ID of the tab
+ * @param {Number} [options.weight=0] Order tabs by weight. Tabs with lower weight first.
  * @property {DOMNode} content
  * @property {DOMNode} header
  * @property {Tabs} master
