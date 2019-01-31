@@ -31,6 +31,13 @@ Tab.prototype.select = function () {
 }
 
 /**
+ * select this tab
+ */
+Tab.prototype.isSelected = function () {
+  return this.master.selected === this
+}
+
+/**
  * toggle this tab (if selected, unselect)
  */
 Tab.prototype.toggle = function () {
