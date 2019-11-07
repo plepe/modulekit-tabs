@@ -35,6 +35,23 @@ Tabs.prototype.add = function (tab) {
 }
 
 /**
+ * remove a tab
+ * @param {Tab} tab
+ */
+Tabs.prototype.remove = function (tab) {
+  const i = this.list.indexOf(tab)
+
+  if (i === -1) {
+    return
+  }
+
+  this.list.splice(i, 1)
+  this.headers.removeChild(tab.header)
+  this.node.removeChild(tab.content)
+  this.reorder()
+}
+
+/**
  * reorder tabs (by weight)
  */
 Tabs.prototype.reorder = function () {
